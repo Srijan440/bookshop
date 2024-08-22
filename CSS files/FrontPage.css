@@ -20,8 +20,17 @@ body {
     color: #ffffff;
 }
 
+
 /* Main Container */
 .Maincont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.second {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -100,7 +109,7 @@ p {
 }
 
 .login-btn:hover {
-    background-color: #FC5C7D;
+    background-color: #ffd700;
     color: #fff;
 }
 
@@ -120,7 +129,7 @@ p {
 
 .signup-btn-inline:hover {
     background-color: #fff;
-    color: #FC5C7D;
+    color: #ffd700;
 }
 
 /* Mobile Responsiveness */
@@ -133,4 +142,66 @@ p {
     .login-card {
         width: 100%;
     }
+}
+
+.neon-text a{
+    font-size: 72px; /* Size of the text */  
+    text-decoration: none;
+    color: #ffd700;
+}
+
+.neon-text {  
+    height: 200px;  
+    width: 100%;  
+    /* background: rgba(255, 255, 255, 0.1); Use a translucent background for the glass effect   */
+    background-color: rgba(0, 0, 0, 0.8);
+    /* backdrop-filter: blur(10px); Blurs the background to create the glassmorphism effect   */
+    margin-bottom: 100px;  
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Light border to enhance the glass effect */  
+    border-radius: 10px;  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    text-align: center;  
+
+    cursor: pointer;
+
+    user-select: none;
+    text-decoration: none;  
+    color: #ffd700; /* Neon text color */  
+    font-size: 72px; /* Size of the text */  
+    /* text-shadow:   
+        0 0 5px #ffd700,  
+        0 0 10px #ffd700,   
+        0 0 20px  #ffd700,  
+        0 0 30px #a2571f, 
+        0 0 40px #a2571f,  
+        0 0 50px #a2571f,  
+        0 0 60px #a2571f;   */
+
+    animation: pulse 3s infinite alternate; /* Add pulsing effect */  
+}  
+
+@keyframes pulse {  
+    0% {  
+
+        text-shadow:   
+            0 0 1px #ffd700,   
+            0 0 2px #ffd700,   
+            0 0 3px  #ffd700,  
+            0 0 4px #a2571f,  
+            0 0 5px #a2571f,  
+            0 0 6px #a2571f,  
+            0 0 7px #a2571f;  
+    }  
+    100% {  
+        text-shadow:   
+            0 0 1px #ffd700,   
+            0 0 5px #ffd700,   
+            0 0 10px  #ffd700,  
+            0 0 20px #a2571f,  
+            0 0 30px #a2571f,  
+            0 0 40px #a2571f,  
+            0 0 50px #a2571f;  
+    }  
 }

@@ -20,10 +20,23 @@ body {
    background-color: #252525;
 }
 
-.logo h1 {
+.logo a{
+   text-decoration: none;
    color: #ffd700;
-   font-size: 1.5rem;
-   font-weight: 600;
+   display: flex;
+   justify-items: center;
+   align-items: center;
+   gap:0.5rem;
+   font-family:monospace;
+   font-size: 1.75rem;
+   cursor: pointer;
+   user-select: none;
+}
+
+.logo img {
+   height: 2rem; /* Matches the font size of the original <h1> */
+   max-height: 100%;
+   width: auto;
 }
 
 .navbar a {
