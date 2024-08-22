@@ -1,40 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Selection</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login Selection</title>
 
-    <link rel="stylesheet" href="CSS files/FrontPage.css">
-</head>
-<body>
-    <a href="Login.html" class="signup-btn">Sign Up</a>
-    <div class="Maincont">
-        <div class="second">
-        <img class="Image1" src="icons/building-8173603.jpg">
-        <div class="login-selection-container">
-            <div class="login-card clerk-card">
-                <h3>Clerk Login</h3>
-                <p>Manage sales, update inventory, and assist customers.</p>
-                <a href="ClerkAuthentication.html" class="login-btn">Login as Clerk</a>
-            </div>
-            <div class="login-card customer-card">
-                <h3>Customer Login</h3>
-                <p>Access your account, view available books, and make purchases.</p>
-                <a href="CustomerAuthentication.html" class="login-btn">Login as Customer</a>
-            </div>
-            <div class="login-card owner-card">
-                <h3>Owner Login</h3>
-                <p>Monitor sales statistics, manage inventory, and oversee operations.</p>
-                <a href="OwnerAuthentication.html" class="login-btn">Login as Owner</a>
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+            rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet">
+        <!-- External CSS -->
+        <link rel="stylesheet" href="CSS files/FrontPage.css">
+    </head>
+    <body>
+        <div class="Maincont">
+            <div class="second">
+                <img class="Image1" src="icons/books-1204029.jpg"
+                    alt="Background Image">
+                <!-- <video autoplay loop width="50%" controls>
+                    <source
+                        src="./icons/Goku s Kamehameha _ Animation by Yuya Takahashi.mp4"
+                        type="video/mp4">
+                    Your browser does not support the video tag.
+                </video> -->
+                <div class="login-selection-container">
+                    <div class="login-card clerk-card">
+                        <h3>Clerk Login</h3>
+                        <p>Manage sales, update inventory, and assist
+                            customers.</p>
+                        <div class="btn-container">
+                            <a href="ClerkAuthentication.html"
+                                class="login-btn">Login</a>
+                            <a href="Login.html" class="signup-btn-inline">Sign
+                                Up</a>
+                        </div>
+                    </div>
+                    <div class="login-card customer-card">
+                        <h3>Customer Login</h3>
+                        <p>Access your account, view available books, and make
+                            purchases.</p>
+                        <div class="btn-container">
+                            <a href="CustomerAuthentication.html"
+                                class="login-btn">Login</a>
+                            <a href="Login.html" class="signup-btn-inline">Sign
+                                Up</a>
+                        </div>
+                    </div>
+                    <div class="login-card owner-card">
+                        <h3>Owner Login</h3>
+                        <p>Monitor sales statistics, manage inventory, and
+                            oversee operations.</p>
+                        <a href="OwnerAuthentication.html"
+                            class="login-btn">Login as Owner</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-    <script src="index.js"></script>
-</body>
+
+        <script src="index.js"></script>
+    </body>
 </html>

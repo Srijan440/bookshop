@@ -8,7 +8,7 @@
     <div class="login-container">
         <div class="login-form">
             <h2>Customer Login</h2>
-            <form action="/submit" method="POST">
+            <form id="loginForm" method="POST">
                 <div class="input-group">
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" placeholder="Enter your email" required>
@@ -25,5 +25,28 @@
             </form>
         </div>
     </div>
+
+    <script>
+        // Intercept form submission
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();  // Prevent the default form submission
+            
+            // Simulate successful login verification (you'd do this with real server-side code)
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+
+            // Basic simulation of login validation
+            if (email && password) {
+                // Simulate success and redirect
+                redirectToDashboard();
+            } else {
+                alert("Please enter valid credentials.");
+            }
+        });
+
+        function redirectToDashboard() {
+            window.location.href = "CustomerDashboard.html";
+        }
+    </script>
 </body>
 </html>
