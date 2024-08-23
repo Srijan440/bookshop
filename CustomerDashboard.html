@@ -1,33 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customer Dashboard</title>
     <link rel="stylesheet" href="CSS files/CustomerDashboard.css">
 </head>
+
 <body>
-    <div class="Maincont">
-        <img class="Image1" src="icons/building-8173603.jpg" alt="Background Image">
-        <div class="dashboard-container">
-            <div class="dashboard-card">
-                <h2>Real-Time Book Availability</h2>
-                <p>Check availability of books in stock.</p>
-            </div>
-            <div class="dashboard-card">
-                <h2>Search Books</h2>
-                <input type="text" placeholder="Search by title, author, or ISBN" id="search-bar">
-            </div>
-            <div class="dashboard-card">
-                <h2>Pre-Order Books</h2>
-                <p>Pre-order books that are currently out of stock.</p>
-            </div>
-            <div class="dashboard-card">
-                <h2>Checkout</h2>
-                <p>Enjoy a streamlined checkout process.</p>
-            </div>
-        </div>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="logo">
+                <a href=""><img src="icons/icon.svg" alt="BookHeaven Logo">
+                BookHeaven</a>
+             </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Book Availability</a></li>
+                    <li><a href="#">New Series</a></li>
+                    <li><a href="#">Pre-Order</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <div class="search-container">
+                    <i class="search-icon"></i>
+                    <input type="text" placeholder="Search book name, author, ISBN...">
+                </div>
+                <div class="profile">
+                    <img src="profile.jpg" alt="User Profile">
+                </div>
+            </header>
+            <section class="welcome">
+                <h1>Happy reading, Harvey</h1>
+                <p>Wow! You’ve delved deep into the wizarding world’s secrets. Keep going!</p>
+                <button class="btn-read">Start Reading</button>
+            </section>
+
+            <section class="popular-books">
+                <h2>Popular Now</h2>
+                <div class="slider-container">
+                    <button class="prev">&#10094;</button>
+                    <div class="slider">
+                        <div class="slide">
+                            <div class="book">
+                                <img src="icons/GoT cover.jpg" alt="Game of Thrones">
+                                <p>Game of Thrones</p>
+                                <span class="availability">Available</span>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="book">
+                                <img src="icons/Fantastic Beasts.jpg" alt="Fantastic Beasts">
+                                <p>Fantastic Beasts</p>
+                                <span class="pre-order">Pre-Order</span>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="book">
+                                <img src="icons/GoT cover.jpg" alt="Game of Thrones">
+                                <p>Game of Thrones</p>
+                                <span class="availability">Available</span>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="book">
+                                <img src="icons/Fantastic Beasts.jpg" alt="Fantastic Beasts">
+                                <p>Fantastic Beasts</p>
+                                <span class="pre-order">Pre-Order</span>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="book">
+                                <img src="icons/The Wise Man's Fear.jpg" alt="The Wise Man's Fear">
+                                <p>The Wise Man's Fear</p>
+                                <span class="out-of-stock">Out of Stock</span>
+                            </div>
+                        </div>
+                        <!-- Add more slides as needed -->
+                    </div>
+                    <button class="next">&#10095;</button>
+                </div>
+            </section>
+        </main>
     </div>
-    <script src="CustomerDashboard.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const slider = document.querySelector('.slider');
+    const slides = document.querySelectorAll('.slide');
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
+    
+    let index = 0;
+
+    function updateSlidePosition() {
+        slider.style.transform = `translateX(-${index * 25}%)`; // Adjust based on the number of slides visible
+    }
+
+    prevButton.addEventListener('click', () => {
+        index = (index > 0) ? index - 1 : slides.length - 1;
+        updateSlidePosition();
+    });
+
+    nextButton.addEventListener('click', () => {
+        index = (index < slides.length - 4) ? index + 1 : 0; // Ensure it wraps around properly
+        updateSlidePosition();
+    });
+
+    // Initialize the slider position
+    updateSlidePosition();
+});
+
+    </script>
 </body>
+
 </html>
