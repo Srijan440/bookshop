@@ -12,9 +12,8 @@
     <div class="dashboard">
         <aside class="sidebar">
             <div class="logo">
-                <a href=""><img src="icons/icon.svg" alt="BookHeaven Logo">
-                BookHeaven</a>
-             </div>
+                <a href=""><img src="icons/icon.svg" alt="BookHeaven Logo"> BookHeaven</a>
+            </div>
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
@@ -24,7 +23,7 @@
                 </ul>
             </nav>
         </aside>
-
+        
         <main class="main-content">
             <header class="header">
                 <div class="search-container">
@@ -32,91 +31,100 @@
                     <input type="text" placeholder="Search book name, author, ISBN...">
                 </div>
                 <div class="profile">
-                    <img src="profile.jpg" alt="User Profile">
+                    <img src="icons/library.jpg" alt="User Profile">
                 </div>
             </header>
+
             <section class="welcome">
                 <h1>Happy reading, Harvey</h1>
                 <p>Wow! You’ve delved deep into the wizarding world’s secrets. Keep going!</p>
                 <button class="btn-read">Start Reading</button>
             </section>
 
+            <!-- Glassmorphism Slider Section -->
             <section class="popular-books">
-                <h2>Popular Now</h2>
-                <div class="slider-container">
-                    <button class="prev">&#10094;</button>
-                    <div class="slider">
-                        <div class="slide">
-                            <div class="book">
-                                <img src="icons/GoT cover.jpg" alt="Game of Thrones">
-                                <p>Game of Thrones</p>
-                                <span class="availability">Available</span>
+                <h2 class="title">Popular Now</h2>
+                <div class="glass-box">
+                    <div class="slider-container">
+                        <button class="prev">&#10094;</button>
+                        <div class="slider">
+                            <div class="slide">
+                                <div class="book">
+                                    <img src="icons/GoT cover.jpg" alt="Game of Thrones">
+                                    <p>Game of Thrones</p>
+                                    <span class="availability">Available</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="slide">
-                            <div class="book">
-                                <img src="icons/Fantastic Beasts.jpg" alt="Fantastic Beasts">
-                                <p>Fantastic Beasts</p>
-                                <span class="pre-order">Pre-Order</span>
+                            <div class="slide">
+                                <div class="book">
+                                    <img src="icons/Fantastic Beasts.jpg" alt="Fantastic Beasts">
+                                    <p>Fantastic Beasts</p>
+                                    <span class="pre-order">Pre-Order</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="slide">
-                            <div class="book">
-                                <img src="icons/GoT cover.jpg" alt="Game of Thrones">
-                                <p>Game of Thrones</p>
-                                <span class="availability">Available</span>
+                            <div class="slide">
+                                <div class="book">
+                                    <img src="icons/GoT cover.jpg" alt="Game of Thrones">
+                                    <p>Game of Thrones</p>
+                                    <span class="availability">Available</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="slide">
-                            <div class="book">
-                                <img src="icons/Fantastic Beasts.jpg" alt="Fantastic Beasts">
-                                <p>Fantastic Beasts</p>
-                                <span class="pre-order">Pre-Order</span>
+                            <div class="slide">
+                                <div class="book">
+                                    <img src="icons/Fantastic Beasts.jpg" alt="Fantastic Beasts">
+                                    <p>Fantastic Beasts</p>
+                                    <span class="pre-order">Pre-Order</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="slide">
-                            <div class="book">
-                                <img src="icons/The Wise Man's Fear.jpg" alt="The Wise Man's Fear">
-                                <p>The Wise Man's Fear</p>
-                                <span class="out-of-stock">Out of Stock</span>
+                            <div class="slide">
+                                <div class="book">
+                                    <img src="icons/Fantastic Beasts.jpg" alt="Fantastic Beasts">
+                                    <p>Fantastic Beasts</p>
+                                    <span class="pre-order">Pre-Order</span>
+                                </div>
                             </div>
+                            <div class="slide">
+                                <div class="book">
+                                    <img src="icons/The Wise Man's Fear.jpg" alt="The Wise Man's Fear">
+                                    <p>The Wise Man's Fear</p>
+                                    <span class="out-of-stock">Out of Stock</span>
+                                </div>
+                            </div>
+                            <!-- Add more slides as needed -->
                         </div>
-                        <!-- Add more slides as needed -->
+                        <button class="next">&#10095;</button>
                     </div>
-                    <button class="next">&#10095;</button>
                 </div>
             </section>
         </main>
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-    const slider = document.querySelector('.slider');
-    const slides = document.querySelectorAll('.slide');
-    const prevButton = document.querySelector('.prev');
-    const nextButton = document.querySelector('.next');
-    
-    let index = 0;
-
-    function updateSlidePosition() {
-        slider.style.transform = `translateX(-${index * 25}%)`; // Adjust based on the number of slides visible
-    }
-
-    prevButton.addEventListener('click', () => {
-        index = (index > 0) ? index - 1 : slides.length - 1;
-        updateSlidePosition();
-    });
-
-    nextButton.addEventListener('click', () => {
-        index = (index < slides.length - 4) ? index + 1 : 0; // Ensure it wraps around properly
-        updateSlidePosition();
-    });
-
-    // Initialize the slider position
-    updateSlidePosition();
-});
-
-    </script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+     
+        // Function to update the slide position
+        function updateSlider() {
+            const slider = document.querySelector('.slider');
+            slider.style.transform = `translateX(${-slideIndex * 100}%)`;
+        }
+     
+        // Move to the next slide
+        document.querySelector('.next').addEventListener('click', function() {
+            slideIndex = (slideIndex + 1) % totalSlides;
+            updateSlider();
+        });
+     
+        // Move to the previous slide
+        document.querySelector('.prev').addEventListener('click', function() {
+            slideIndex = (slideIndex - 1 + totalSlides) % totalSlides;
+            updateSlider();
+        });
+     
+        // Initialize slider to first slide
+        updateSlider();
+     </script>
 </body>
 
 </html>

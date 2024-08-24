@@ -8,14 +8,14 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Add event listeners for redirection
     customerBtn.addEventListener('click', () => {
-        window.location.href = 'CustomerAuthentication.html'; // URL to Customer login page
+        window.location.href = 'Customer_Login.html'; // URL to Customer login page
     });
 
     clerkBtn.addEventListener('click', () => {
-        window.location.href = 'ClerkAuthentication.html'; // URL to Clerk login page
+        window.location.href = 'Clerk_Login.html'; // URL to Clerk login page
     });
 
     ownerBtn.addEventListener('click', () => {
-        window.location.href = 'OwnerAuthentication.html'; // URL to Owner login page
+        window.location.href = 'Owner_Login.html'; // URL to Owner login page
     });
 });

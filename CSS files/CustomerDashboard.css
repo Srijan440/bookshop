@@ -25,24 +25,26 @@ body {
    height: 100vh;
    background-color: rgba(0, 0, 0, 0.7); /* Overlay for text contrast */
 }
-.logo a{
+
+.logo a {
    text-decoration: none;
    color: #ffd700;
    display: flex;
    justify-items: center;
    align-items: center;
-   gap:0.5rem;
-   font-family:monospace;
+   gap: 0.5rem;
+   font-family: monospace;
    font-size: 1.5rem;
    cursor: pointer;
    user-select: none;
 }
 
 .logo img {
-   height: 2rem; /* Matches the font size of the original <h1> */
-   max-height: 100%;
+   height: 2rem;
    width: auto;
+   margin-left: -8px;
 }
+
 .sidebar {
    width: 15%;
    background-color: rgba(0, 0, 0, 0.8); /* Glass effect background */
@@ -50,11 +52,12 @@ body {
    height: 100vh;
    display: flex;
    flex-direction: column;
-   align-items: center;
+   align-items: flex-start; /* Align items to the start (left) */
+   justify-content: flex-start; /* Align items from the top */
 }
 
 .sidebar .logo {
-   margin-bottom: 50px;
+   margin-bottom: 20px; /* Adjusted margin for better spacing */
    font-size: 24px;
    font-weight: bold;
    color: #ffd700;
@@ -62,11 +65,14 @@ body {
 
 .sidebar nav ul {
    list-style-type: none;
-   text-align: center;
+   padding: 0; /* Remove default padding */
+   margin: 0; /* Remove default margin */
+   width: 100%; /* Full width for alignment */
 }
 
 .sidebar nav ul li {
-   margin: 20px 0;
+   margin: 15px 0; /* Adjusted margin for spacing */
+   text-align: left; /* Align text to the left */
 }
 
 .sidebar nav ul li a {
@@ -87,7 +93,7 @@ body {
    flex-direction: column;
    justify-content: space-between;
    color: #fff;
-   margin-left: 5%; /* Reduced space for the sidebar */
+   margin-left: 1%; /* Reduced space for the sidebar */
 }
 
 .header {
@@ -95,6 +101,11 @@ body {
    justify-content: space-between;
    align-items: center;
    margin-bottom: 20px;
+   margin-left: 75px;
+}
+
+.welcome {
+   margin-left: 75px;
 }
 
 .search-container {
@@ -127,9 +138,12 @@ body {
 }
 
 .header .profile img {
-   width: 50px;
+   width: 40px;
    border-radius: 50%;
    margin-right: 10px;
+   height: 38px;
+   border: solid;
+   border-width: 1px;
 }
 
 .welcome h1 {
@@ -149,19 +163,37 @@ body {
    border-radius: 5px;
 }
 
+/* Glassmorphism Slider Section */
+.glass-box {
+   background: rgba(255, 255, 255, 0.1); /* Translucency for glass effect */
+   backdrop-filter: blur(5px); /* Slightly reduced blur */
+   border-radius: 12px;
+   padding: 10px;
+   padding-bottom: 0px;
+   width: 85%;
+   margin: 0 auto;
+   box-shadow: 0 6px 24px 0 rgba(31, 38, 135, 0.3); /* Softer shadow */
+   border: 1px solid rgba(255, 255, 255, 0.15); /* Lightened border */
+}
+
 .popular-books {
-   margin-bottom: 30px;
-   margin-top: 20px;
+   margin-bottom: 20px;
+   margin-top: 10px;
+}
+
+.title {
+   margin-left: 75px;
 }
 
 .popular-books h2 {
-   font-size: 28px;
-   margin-bottom: 20px;
+   font-size: 24px;
+   margin-bottom: 15px;
 }
 
 .slider-container {
    position: relative;
-   overflow: hidden;
+   overflow: hidden; /* Hide anything outside the container */
+   width: 100%; /* Ensure it takes full width */
 }
 
 .slider {
@@ -170,26 +202,32 @@ body {
 }
 
 .slide {
-   min-width: 25%; /* Display 4 books at a time */
+   min-width: 18%; /* Each slide takes 16.66% of container width (6 slides) */
    box-sizing: border-box;
    display: flex;
    justify-content: center;
+   padding: 4px; /* Reduced padding between books */
 }
 
 .slide .book {
-   padding: 10px;
    text-align: center;
-   max-width: 150px; /* Adjust width for smaller books */
-   margin: 0 5px; /* Space between books */
+   max-width: 110px; /* Reduced max-width for smaller books */
+   margin: 0 2px; /* Reduced margin between books */
 }
 
 .book img {
    width: 100%;
    height: auto;
    border-radius: 5px;
-   margin-bottom: 10px;
+   margin-bottom: 8px;
    object-fit: cover;
-   transition: transform 0.3s ease;
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+   cursor: pointer;
+}
+
+.book img:hover {
+   transform: scale(1.1); /* Enlarges the image by 10% */
+   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Adds a subtle shadow effect */
 }
 
 .prev, .next {
@@ -211,11 +249,11 @@ body {
 }
 
 .prev {
-   left: 10px;
+   left: 0px;
 }
 
 .next {
-   right: 10px;
+   right: 0px;
 }
 
 .checkout-section {
@@ -233,7 +271,7 @@ body {
 
 @media (max-width: 768px) {
    .slider {
-       height: 200px; /* Adjust height for smaller screens */
+       height: 180px;
    }
 
    .prev, .next {
@@ -243,6 +281,6 @@ body {
    }
 
    .slide .book {
-       max-width: 120px; /* Adjust width for smaller screens */
+       max-width: 90px; /* Further reduced size for smaller screens */
    }
 }

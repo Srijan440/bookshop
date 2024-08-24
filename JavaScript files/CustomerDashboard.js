@@ -1,22 +1,26 @@
-document.getElementById("search-bar").addEventListener("input", function() {
-   let query = this.value;
-   // Call a function to search for books based on the query
-   searchBooks(query);
-});
+<script>
+   let slideIndex = 0;
+   const slides = document.querySelectorAll('.slide');
+   const totalSlides = slides.length;
 
-function searchBooks(query) {
-   // Implement search logic (e.g., AJAX call to a database or API)
-   console.log("Searching for books with query:", query);
-}
+   // Function to update the slide position
+   function updateSlider() {
+       const slider = document.querySelector('.slider');
+       slider.style.transform = `translateX(${-slideIndex * 100}%)`;
+   }
 
-function checkBookAvailability() {
-   // Real-time book availability logic (e.g., call an API)
-}
+   // Move to the next slide
+   document.querySelector('.next').addEventListener('click', function() {
+       slideIndex = (slideIndex + 1) % totalSlides;
+       updateSlider();
+   });
 
-function handlePreOrder(bookId) {
-   // Pre-order logic
-}
+   // Move to the previous slide
+   document.querySelector('.prev').addEventListener('click', function() {
+       slideIndex = (slideIndex - 1 + totalSlides) % totalSlides;
+       updateSlider();
+   });
 
-function handleCheckout() {
-   // Checkout logic
-}
+   // Initialize slider to first slide
+   updateSlider();
+</script>
