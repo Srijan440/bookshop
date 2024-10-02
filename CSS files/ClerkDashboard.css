@@ -1,0 +1,292 @@
+/* Ensure the body and html allow scrolling when needed */
+html, body {
+    overflow: hidden; /* Prevent scrolling by default */
+    height: 100%; /* Ensure full height */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: url('../icons/library.jpg') no-repeat center center/cover;
+    height: 100%;
+    margin: 0;
+    color: #ffffff;
+    background-attachment: fixed;
+    box-sizing: border-box; /* Ensure padding and border are included in width/height */
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 230px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    backdrop-filter: blur(10px); /* Glassmorphism blur effect */
+    padding: 20px 15px; /* Adjusted padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Aligns the content to the top */
+    position: fixed;
+    overflow: hidden;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+}
+
+/* Sidebar Logo */
+.logo a {
+    text-decoration: none;
+    color: #ffd700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Merriweather', sans-serif;
+    font-size: 1.75rem;
+    cursor: pointer;
+    user-select: none;
+    margin-top: 15px;
+    margin-bottom: 35px; /* Add space below logo */
+}
+
+.logo img {
+    height: 2rem; /* Matches the font size */
+    width: auto;
+}
+
+/* Sidebar Menu */
+.sidebar-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-menu li {
+    margin-bottom: 15px; /* Space between items */
+}
+
+.sidebar-menu a {
+    text-decoration: none;
+    font-size: 1.1rem; /* Adjusted font size for readability */
+    color: #9e8ab7; /* Light purple for icons/text */
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and text */
+    padding: 10px;
+    border-radius: 5px; /* Slight border radius for a cleaner look */
+    font-style: normal; /* Set icons and text to normal style */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+}
+
+.sidebar-menu a i {
+    font-size: 1.2rem; /* Adjusted icon size */
+    color: #ffd700; /* Golden color for icons */
+    font-style: normal; /* Ensure icons are normal, not italic */
+}
+
+.sidebar-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle background color change */
+    color: #ffd700; /* Golden color on hover */
+}
+
+/* Sidebar Icon Styles */
+.sidebar-menu .icon img {
+    width: 24px; /* Adjust the width based on how large you want the icon */
+    height: 24px; /* Adjust the height to match the width */
+    object-fit: contain; /* Ensures the icon doesn’t get stretched */
+    margin-right: 12px; /* Space between the icon and the text */
+    vertical-align: middle; /* Aligns the icon with the text vertically */
+}
+
+.sidebar-menu a:hover .icon img{
+    transform: scale(1.2); /* Grow the icon slightly on hover */
+    color: #ffd700; /* Golden color on hover */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+
+/* Dashboard container styling */
+.dashboard {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+}
+
+
+
+/* Main content styling */
+.main-content {
+    padding: 20px; /* Increased padding for spacing */
+    width: calc(100% - 270px); /* Account for sidebar width and additional margin */
+    margin-left: 270px; /* Account for sidebar width */
+    overflow-x: auto; /* Allow horizontal scrolling */
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+/* Welcome box styling */
+.welcome-box {
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Glassmorphism effect */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    color: #ffd700; /* Text color */
+    margin-bottom: 20px; /* Space below the welcome box */
+}
+
+/* Header styling */
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h2{
+    font-family: 'Merriweather', sans-serif;
+    color: white;
+    margin-bottom: 33px;
+    font-size: 33px;
+}
+
+/* Divider styling */
+.divider {
+    height: 2px;
+    background-color: #ccc; /* Adjust color to match your theme */
+    margin: 20px 0; /* Spacing around the divider */
+    margin-bottom: 80px;
+}
+
+/* Card container styling */
+.card-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping if necessary */
+    gap: 20px; /* Space between the cards */
+    justify-content:space-around; /* Align items to start of the container */
+    padding: 0; /* No padding around the container */
+    box-sizing: border-box; /* Ensure padding is included in width */
+    
+}
+
+/* Card styling */
+.card {
+    background: rgba(255, 255, 255, 0.1); /* Transparent white for glassmorphism */
+    backdrop-filter: blur(10px); /* Glassmorphism blur effect */
+    border-radius: 12px; /* Increased border radius for softer edges */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Stronger shadow for depth */
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.2); /* Subtle border for a glass effect */
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1 1 20%; /* Adjust the basis to fit more cards in a row */
+    min-width: 180px;
+    max-width: 250px;
+    box-sizing: border-box;
+}
+
+/* Card image styling */
+.card-image {
+    position: relative;
+    overflow: hidden;
+    height: 150px;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)); /* Gradient for better text readability */
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* Icon container styling (now placed between image and text) */
+.icon-container {
+    position:relative;
+    top: -38px; /* Positioning it to slightly overlap the bottom of the image */
+    margin: 0 auto; /* Center the icon */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff; /* Light background for the icon */
+    border-radius: 50%;
+    padding: 10px;
+    z-index: 1; /* On top of the image */
+    width: 60px;
+    height: 60px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.icon-container img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 10px;
+    background-color:#8D58BF; /* Adding a purple border for extra emphasis */
+}
+
+/* Card title styling */
+.card-title {
+    color: #ffd700; /* Golden text color for contrast */
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    width: 90%;
+    line-height: 1.3;
+    white-space: normal;
+    margin-top: 20px; /* Give some space between the icon and the title */
+}
+
+/* Card content styling */
+.card-content {
+    display: flex;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center;
+    flex-grow: 1;
+    margin-top: -10px;
+}
+
+
+
+/* Card footer styling */
+.card-footer {
+    padding: 16px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Explore button styling */
+.explore-button {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: #ffffff; /* White text color for the button */
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Semi-transparent white border */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight:500;
+}
+
+.explore-button:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Slight background change on hover */
+    color: #ffd700; /* Golden hover text color */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .card {
+        flex: 1 1 30%;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        flex: 1 1 90%;
+    }
+}

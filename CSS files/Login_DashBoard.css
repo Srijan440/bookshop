@@ -1,0 +1,170 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('../icons/library.jpg');
+    background-size: cover;  
+    background-position: center;  
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+/* Main Container */
+.Maincont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.second {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Login Container */
+.login-selection-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    max-width: 900px;
+}
+
+/* Individual Login Card Styling */
+.login-card {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    width: 30%;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    /* Removed transition effects on components */
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #E0E0E0;
+}
+
+/* Button Container */
+.btn-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+/* Login Button */
+.login-btn {
+    background-color: #fff;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background-color: #ffd700;
+    color: #fff;
+}
+
+/* Signup Inline Button */
+.signup-btn-inline {
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.signup-btn-inline:hover {
+    background-color: #fff;
+    color: #ffd700;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .login-selection-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .login-card {
+        width: 100%;
+    }
+}
+
+.neon-text a {
+    font-size: 72px;
+    text-decoration: none;
+    color: #ffd700;
+}
+
+.neon-text {
+    height: 200px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffd700;
+    font-size: 72px;
+    animation: pulse 3s infinite alternate;
+}
+
+@keyframes pulse {
+    0% {
+        text-shadow:
+            0 0 1px #ffd700,
+            0 0 2px #ffd700,
+            0 0 3px #ffd700,
+            0 0 4px #a2571f,
+            0 0 5px #a2571f,
+            0 0 6px #a2571f,
+            0 0 7px #a2571f;
+    }
+    100% {
+        text-shadow:
+            0 0 1px #ffd700,
+            0 0 5px #ffd700,
+            0 0 10px #ffd700,
+            0 0 20px #a2571f,
+            0 0 30px #a2571f,
+            0 0 40px #a2571f,
+            0 0 50px #a2571f;
+    }
+}

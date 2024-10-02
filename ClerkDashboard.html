@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clerk Dashboard</title>
+    <link rel="stylesheet" href="CSS files/ClerkDashboard.css">
+</head>
+
+<body>
+    <div class="dashboard">
+        <div class="sidebar">
+            <div class="sidebar-header">
+              <!-- Logo Section -->
+              <div class="logo">
+                <a href=""><img src="icons/Logo.svg" alt="BookHeaven Logo"> BookHeaven</a>
+              </div>
+              <!-- Navigation Menu -->
+              <ul class="sidebar-menu">
+                <li><a href="Dashboard.html"><i class="icon"><img src="icons/dashboard-icon.png"></i> Dashboard</a></li>
+                <li><a href="#"><i class="icon"><img src="icons/analysis.png"></i> Analysis</a></li>
+                <li><a href="#"><i class="icon"><img src="icons/documents.png"></i> Documents</a></li>
+                <li><a href="#"><i class="icon"><img src="icons/inbox.png"></i> Inbox</a></li>
+                <li><a href="#"><i class="icon"><img src="icons/history.png"></i> History</a></li>
+                <li><a href="#"><i class="icon"><img src="icons/setting.png"></i> Settings</a></li>
+              </ul>
+            </div>
+          </div>
+        <main class="main-content">
+            <!-- Welcome heading at the top -->
+            <header class="header">
+                <h2>Welcome, Clerk!</h2>
+                <div class="divider"></div> <!-- Divider line under the header -->
+            </header>
+
+            <!-- Card container for alignment -->
+            <div class="card-container">
+                <!-- Start of card structure -->
+                <div class="card">
+                    <div class="card-image">
+                        <img src="Stickers/Check Availability2.jpg" alt="Research Image">    
+                        <div class="card-title">Book Availability Query Handling</div>
+                    </div>
+                    <div class="icon-container">
+                        <img src="icons/ico.svg" alt="Icon">
+                    </div>
+                    <div class="card-content">
+                        <p>Check stock and respond to customer inquiries about book availability by title or author.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="explore-button">Check Availability</a>
+                    </div>
+                </div>
+
+                <!-- Repeat the card structure for other cards -->
+                <div class="card">
+                    <div class="card-image">
+                        <img src="Stickers/payment-process.jpg" alt="Research Image">
+                        <div class="card-title">Processing Book Purchases</div>
+                    </div>
+                    <div class="icon-container">
+                        <img src="icons/ico.svg" alt="Icon">
+                    </div>
+                    <div class="card-content">
+                        <p>Enter the ISBN number of a book, update stock, and generate sales receipts.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="explore-button">Process Purchase</a>
+                    </div>
+                </div>
+
+                <!-- Additional cards -->
+                <div class="card">
+                    <div class="card-image">
+                        <img src="Stickers/Inventory Update.jpg" alt="Research Image">
+                        <div class="card-title">Inventory Updates</div>
+                    </div>
+                    <div class="icon-container">
+                        <img src="icons/ico.svg" alt="Icon">
+                    </div>
+                    <div class="card-content">
+                        <p>Update inventory records when new supplies arrive and ensure data accuracy.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="explore-button">Update Inventory</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image">
+                        <img src="Stickers/Monitoring Stock.jpg" alt="Research Image">
+                        <div class="card-title">Monitoring Stock Levels</div>
+                    </div>
+                    <div class="icon-container">
+                        <img src="icons/ico.svg" alt="Icon">
+                    </div>
+                    <div class="card-content">
+                        <p>Monitor books that are below threshold and prepare low-stock lists for procurement</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="explore-button">Monitor Stock</a>
+                    </div>
+                </div>
+                <!-- End of card structure -->
+
+            </div> <!-- End of card container -->
+        </main>
+    </div> <!-- End of dashboard -->
+
+    <script src="JavaScript files/ClerkDashboard.js"></script>
+</body>
+
+</html>

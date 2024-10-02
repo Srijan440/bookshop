@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    .main-card{
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.card {
+    width: 300px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border: 1px dashed #fbc8c8; /* Dashed border */
+}
+
+.card-image {
+    position: relative;
+    overflow: hidden;
+    height: 220px; /* Slightly increased height */
+    width: 100%;    
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
+.card-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.2rem; /* Slightly decrease font size to fit better */
+    font-weight: bold;
+    text-align: center;
+    width: 90%; /* Adjust width to control wrapping */
+    max-width: 250px; /* Maximum width to make it wrap into two lines */
+    line-height: 1.2; /* Adjust line height for better spacing */
+    white-space: normal; /* Allow text to wrap */
+}
+/* Icon Container Styles */
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white; /* Background to match the card */
+    padding: 10px 0;
+    position: relative;
+    z-index: 1;
+    margin-top: -20px; /* Added margin to slightly overlap with the image */
+}
+
+.icon-container img {
+    width: 50px; /* Size of the icon */
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f3f3f3; /* Background color for icon */
+    padding: 10px; /* Padding inside the icon circle */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: -40px;
+
+}
+
+.card-content {
+    display:flex;
+    padding: 0;
+    text-align: left;
+}
+
+.card-content .ul {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.card-content .ul a {
+    text-decoration: none;
+    color: black;
+    font-weight: normal;
+    font-size: 1rem;
+    align-items: center;
+}
+
+.card-footer {
+    padding: 16px;
+    text-align: center;
+    background-color: #ffffff;
+    border-top: 1px solid #f1f1f1;
+}
+
+.explore-button {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: #008000; /* Green color for the button text */
+    background-color: transparent;
+    border: 1px solid #008000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: bold;
+}
+
+.explore-button:hover {
+    background-color: #008000;
+    color: white;
+}
+
+    </style>
+    <title>Card Design</title>
+</head>
+<body class="main-card">
+    <div class="card">
+        <div class="card-image">
+            <img src="icons/student.jpg" alt="Research Image">
+            <div class="card-title">Book Availability Query Handling</div> 
+        </div>
+        <div class="icon-container">
+            <img src="icons/ico.svg" alt="Icon">
+        </div>
+        <div class="card-content">
+            <ul>
+                    <p>Check stock and respond to customer inquiries about book availability by title or author.</p>
+            </ul>
+        </div>
+        <div class="card-footer">
+            <a href="#" class="explore-button">Check Availability</a>
+        </div>
+    </div>
+</body>
+</html>

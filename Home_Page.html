@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookHeaven - Discover Books</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900&display=swap" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="CSS files/Home_Page.css">
+</head>
+
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+               <a href=""><img src="icons/Logo.svg" alt="BookHeaven Logo">
+               BookHeaven</a>
+               
+            </div>
+            <nav class="navbar">
+               <a href="#">Home</a>
+               <a href="#">All Books</a>
+               <a href="#">Cart</a>
+               <a href="#">Profile</a>
+               <a href="Login_DashBoard.html" class="login-btn">Login</a>
+               <a href="SignUp_Page.html" class="signup-btn">SignUp</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Discover Your Next <br> Great Read</h1>
+            <p>Uncover captivating stories, enriching knowledge, and endless
+                inspiration in our curated collection of books.</p>
+            <button class="discover-btn" onclick="scrollToSection('books-section')">Get started</button>
+        </div>
+        <div class="hero-image">
+            <img src="icons/Screenshot (5).jpg" alt="Books Image">
+        </div>
+    </section>
+
+    <!-- New Section for Books -->
+    <section id="books-section" class="books-section">
+        <div class="books-content">
+            <h2>LOGIN PAGE</h2>
+            <p>Take the guesswork out of web design with professionally built, customizable website themes that let you easily change the look and feel of your entire website. Then leverage built-in page templates, custom modules, style settings, and more. Your new website will be up and running in no time.</p>
+            <div class="quotes">
+                <blockquote>
+                    <p>"A room without books is like a body without a soul." - Cicero</p>
+                </blockquote>
+                <blockquote>
+                    <p>"So many books, so little time." - Frank Zappa</p>
+                </blockquote>
+                <blockquote>
+                    <p>"A book is a dream that you hold in your hand." - Neil Gaiman</p>
+                </blockquote>
+            </div>
+        </div>
+        <div class="books-image">
+            <img src="icons/Screenshot (6).png" alt="Books Themes Image">
+        </div>
+    </section>
+
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+
+</html>

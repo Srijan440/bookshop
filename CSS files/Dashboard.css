@@ -1,0 +1,320 @@
+/* Ensure the body and html allow scrolling when needed */
+html, body {
+    overflow: hidden; /* Prevent scrolling by default */
+    height: 100%; /* Ensure full height */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: url('../icons/library.jpg') no-repeat center center/cover;
+    height: 100%;
+    margin: 0;
+    color: #ffffff;
+    background-attachment: fixed;
+    box-sizing: border-box; /* Ensure padding and border are included in width/height */
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 230px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    backdrop-filter: blur(10px); /* Glassmorphism blur effect */
+    padding: 20px 15px; /* Adjusted padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Aligns the content to the top */
+    position: fixed;
+    overflow: hidden;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+}
+
+/* Sidebar Logo */
+.logo a {
+    text-decoration: none;
+    color: #ffd700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Merriweather', sans-serif;
+    font-size: 1.75rem;
+    cursor: pointer;
+    user-select: none;
+    margin-top: 15px;
+    margin-bottom: 35px; /* Add space below logo */
+}
+
+.logo img {
+    height: 2rem; /* Matches the font size */
+    width: auto;
+}
+
+/* Sidebar Menu */
+.sidebar-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-menu li {
+    margin-bottom: 15px; /* Space between items */
+}
+
+.sidebar-menu a {
+    text-decoration: none;
+    font-size: 1.1rem; /* Adjusted font size for readability */
+    color: #9e8ab7; /* Light purple for icons/text */
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and text */
+    padding: 10px;
+    border-radius: 5px; /* Slight border radius for a cleaner look */
+    font-style: normal; /* Set icons and text to normal style */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+}
+
+.sidebar-menu a i {
+    font-size: 1.2rem; /* Adjusted icon size */
+    color: #ffd700; /* Golden color for icons */
+    font-style: normal; /* Ensure icons are normal, not italic */
+}
+
+.sidebar-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle background color change */
+    color: #ffd700; /* Golden color on hover */
+}
+
+/* Sidebar Icon Styles */
+.sidebar-menu .icon img {
+    width: 24px; /* Adjust the width based on how large you want the icon */
+    height: 24px; /* Adjust the height to match the width */
+    object-fit: contain; /* Ensures the icon doesn’t get stretched */
+    margin-right: 12px; /* Space between the icon and the text */
+    vertical-align: middle; /* Aligns the icon with the text vertically */
+}
+
+.sidebar-menu a:hover .icon img{
+    transform: scale(1.2); /* Grow the icon slightly on hover */
+    color: #ffd700; /* Golden color on hover */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.sidebar-menu a1{
+    text-decoration: none;
+    font-size: 1.1rem; /* Adjusted font size for readability */
+    color: #9e8ab7; /* Light purple for icons/text */
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and text */
+    padding: 10px;
+    border-radius: 5px; /* Slight border radius for a cleaner look */
+    font-style: normal; /* Set icons and text to normal style */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle background color change */
+    color: #ffd700; /* Golden color on hover */
+}
+
+/* Dashboard container styling */
+.dashboard {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+}
+
+
+
+
+.main-content {
+    padding: 20px; /* Increased padding for spacing */
+    width: calc(100% - 270px); /* Account for sidebar width and additional margin */
+    margin-left: 270px; /* Account for sidebar width */
+    overflow-x: auto; /* Allow horizontal scrolling */
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+
+/* Analytics Section */
+.channel-analytics {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    color: #fff;
+}
+
+.channel-analytics h2 {
+    display: flex;
+    justify-content: space-between;
+    color: #fff; /* Gold for the title */
+    font-size: 1.5rem;
+}
+
+.analytics-cards {
+    display: flex;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.analytics-card {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.analytics-card h3 {
+    font-size: 1.1rem;
+    color: #fff; /* Gold for card titles */
+    margin-bottom: 10px;
+}
+
+.analytics-card p {
+    font-size: 1.6rem;
+    margin: 0;
+}
+
+/* Latest content container layout */
+.latest-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 20px;
+    margin-top: 30px;
+}
+
+
+
+/* Adjust the content card layout */
+.content-card {
+    background: rgba(255, 255, 255, 0.05); /* More transparent for a subtle look */
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space between top and bottom */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.content-card:hover {
+    transform: scale(1.05); /* Slight grow on hover */
+}
+
+
+
+/* Adjust the content-top section for proper layout */
+.content-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.book-image {
+    width: 60px; /* Adjust image size for better layout */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.content-hashtags {
+    display: flex;
+    flex-direction: column; /* Stack hashtags and timestamp vertically */
+    justify-content: center;
+    padding-left: 10px; /* Add space between the image and text */
+    flex-grow: 1; /* Allow this section to take up remaining space */
+}
+
+.timestamp {
+    font-size: 0.9rem; /* Adjust font size for the timestamp */
+    color: #bdbdbd; /* Lighter color for timestamp */
+    margin-top: 5px; /* Add space between hashtags and timestamp */
+}
+
+/* Divider line between top and bottom section */
+.divider-line {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Lighter divider line */
+    margin: 10px 0;
+}
+
+/* Bottom section (content details with metrics) */
+.content-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Adjust metrics section for icon alignment */
+.metrics {
+    padding-left: 23px;
+    display: flex;
+    justify-content: space-between; /* Distributes metrics evenly */
+    gap: 70px; /* Keep the same gap as before */
+    flex-wrap: wrap; /* Allows the metrics to wrap on smaller screens */
+}
+
+.metrics p {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.metrics img {
+    width: 16px; /* Adjust the size of the icons */
+    height: 16px;
+    vertical-align: middle; /* Ensure icons are aligned with text */
+}
+
+/* Individual content sections */
+.content-section {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 20px;
+    padding-top: 10px;
+    color: #fff;
+}
+
+.content-section h3 {
+    color: #ffd700;
+    margin-bottom: 25px;
+}
+
+/* Responsive design for small screens */
+@media (max-width: 768px) {
+    .content-card {
+        padding: 15px;
+    }
+
+    .book-image {
+        width: 100%;
+    }
+
+    .content-hashtags {
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+/* For smaller screens, adjust the layout */
+@media (max-width: 768px) {
+    .metrics p {
+        flex-basis: 45%; /* On smaller screens, each metric takes up 45% of the row */
+    }
+}
+
+/* For very small screens, stack the metrics vertically */
+@media (max-width: 480px) {
+    .metrics {
+        flex-direction: column; /* Stack metrics on top of each other */
+        align-items: flex-start;
+    }
+
+    .metrics p {
+        flex-basis: 100%; /* Each metric takes up full width in stacked layout */
+    }
+}
