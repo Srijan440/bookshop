@@ -1,27 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup Page</title>
+    <title>Customer Signup</title>
     <link rel="stylesheet" href="CSS files/SignUp_Page.css">
-</head> 
-<body>
-    <div class="container">
-        <img src="icons/vintage-2168174.jpg" alt="Full Page Background" class="background-image">
-
-        <!-- Signup Container -->
-        <div class="signup-container">
-            <h2>Sign Up</h2>
-            <!-- Added action and method attributes -->
-            <form action="your-signup-endpoint.php" method="POST">
-                <input type="text" name="username" placeholder="Username" required>
-                <input type="email" name="email" placeholder="Email" required>
-                <input type="password" name="password" placeholder="Password" required>
-                <input type="password" name="confirm_password" placeholder="Confirm Password" required>
-                <button type="submit">Sign Up</button>
+</head>
+<body style="background: url('icons/library.jpg') no-repeat center center; background-size: cover; display: flex; justify-content: center; align-items: center; height: 100vh; color: #333333;">
+    <div class="login-container">
+        <div class="login-form">
+            <h2>Signup</h2>
+            <form id="signupForm" method="POST">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+                <div class="input-group">
+                    <label for="confirm_password">Confirm Password</label>
+                    <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm your password" required>
+                </div>
+                <button type="submit" class="login-btn">Sign Up</button>
+                <div class="extra-options">
+                    <a href="CustomerLogin.html">Already have an account? Login</a>
+                </div>
             </form>
         </div>
     </div>
+
+    <script>
+        // Intercept form submission
+        document.getElementById("signupForm").addEventListener("submit", function(event) {
+            event.preventDefault();  // Prevent the default form submission
+            
+            // Simulate signup validation (you'd do this with real server-side code)
+            var username = document.getElementById("username").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirm_password").value;
+
+            // Basic validation
+            if (username && email && password && (password === confirmPassword)) {
+                alert("Signup successful!");
+                redirectToLogin();
+            } else {
+                alert("Please ensure all fields are filled and passwords match.");
+            }
+        });
+
+        function redirectToLogin() {
+            window.location.href = "CustomerLogin.html";
+        }
+    </script>
 </body>
 </html>

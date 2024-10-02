@@ -11,18 +11,20 @@ body {
    display: flex;
    justify-content: center;
    align-items: center;
-   height: 100vh;
+   height: 400vh;
    background-image: url('../icons/library.jpg');
+   background-attachment: fixed;
    background-size: cover;
    background-position: center;
    background-repeat: no-repeat;
    color: #ffffff;
+   position: relative;
 }
 
 .dashboard {
    display: flex;
    width: 100%;
-   height: 100vh;
+   height: 400vh;
    background-color: rgba(0, 0, 0, 0.7); /* Overlay for text contrast */
 }
 
@@ -54,6 +56,8 @@ body {
    flex-direction: column;
    align-items: flex-start; /* Align items to the start (left) */
    justify-content: flex-start; /* Align items from the top */
+   position: sticky;
+   top: 0;
 }
 
 .sidebar .logo {
@@ -91,7 +95,7 @@ body {
    padding: 20px;
    display: flex;
    flex-direction: column;
-   justify-content: space-between;
+   /* justify-content: space-between; */
    color: #fff;
    margin-left: 1%; /* Reduced space for the sidebar */
 }
@@ -106,6 +110,7 @@ body {
 
 .welcome {
    margin-left: 75px;
+   margin-bottom: 70px;
 }
 
 .search-container {
@@ -177,8 +182,16 @@ body {
 }
 
 .popular-books {
-   margin-bottom: 20px;
-   margin-top: 10px;
+   margin-bottom: 40px;
+   
+}
+.availability{
+   color: white;
+   background-color: rgb(0, 0, 0);
+   padding: 8px;
+   border: none;
+   border-radius: 5px;
+   margin-top: 5px;
 }
 
 .title {
@@ -268,6 +281,64 @@ body {
    border-radius: 5px;
    cursor: pointer;
 }
+
+/* Footer Styles */
+.footer {
+   background-color: rgb(51, 51, 51);
+   color: #fff;
+   padding: 25px 10px; /* Reduce padding */
+   width: 100%; /* Ensures it spans the entire width */
+   display: flex;
+   justify-content: center; /* Center the content */
+   align-items: center;
+   position: relative;
+   bottom: 0;
+   margin-top: 70px;
+   border-radius: 5px;
+}
+
+.footer-content {
+   display: flex;
+   justify-content: space-between; /* Space between sections */
+   align-items: flex-start;
+   width: 100%; /* Ensures it spans the full width */
+   max-width: 1200px;
+   margin: 0 auto;
+}
+
+.footer-section {
+   flex: 1;
+   margin: 10px 20px;
+   text-align: left;
+}
+
+.footer-section h3 {
+   font-size: 18px;
+   margin-bottom: 10px;
+   color: #ffd700; /* Golden color for headings */
+   text-decoration: underline;
+}
+
+.footer-section ul {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+
+.footer-section ul li {
+   margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+   color: #fff;
+   text-decoration: none;
+   transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+   color: grey; /* Golden hover effect */
+}
+
 
 @media (max-width: 768px) {
    .slider {

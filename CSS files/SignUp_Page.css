@@ -1,98 +1,117 @@
-html, body {
+/* Reset basic elements */
+body {
+    font-size: large;
     margin: 0;
     padding: 0;
-    height: 100%;
-    font-family: 'Poppins', sans-serif;
-}
-
-.container {
-    width: 100%;
-    height: 100vh;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+    background: url("../icons/library.jpg") no-repeat center center;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
-    position: relative;
+    height: 100vh;
+    color: #333333;
 }
 
-.background-image {
+form,
+input,
+button,
+a {
+    font-size: large;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+}
+
+.h2 {
+    font-size: large;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+}
+
+/* Glassmorphism effect for login container */
+.login-container {
+    background: rgba(255,255,255, 0.2); /* Slightly transparent white background */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    padding: 1.5rem; /* Reduced padding */
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-
-/* Signup Container Styling */
-.signup-container {
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(15px);
-    padding: 40px 50px;
-    border-radius: 15px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    max-width: 350px; /* Reduced the max-width */
     text-align: center;
-    width: 400px;
-    color: #000000;
+    transition: background 0.3s ease; /* Smooth transition for background change */
 }
 
-.signup-container h2 {
-    margin-bottom: 25px;
-    font-size: 32px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    margin-top: 5px; /* Adjusted top margin */
+.login-form h2 {
+    margin-bottom: 1rem; /* Adjusted margin */
+    font-size: 1.8rem; /* Slightly smaller font size */
+    color: #ffd700; /* Golden color for headings */
 }
-.signup-container input {
-    width: calc(100% - 20px); /* Adjusted width for better centering */
-    padding: 12px 15px;
-    margin: 10px auto; /* Center the input fields */
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    background: rgba(20, 148, 195, 0.3);
-    color: rgb(0, 0, 0);
-    transition: background 0.3s ease, box-shadow 0.3s ease;
+
+.input-group {
+    margin-bottom: 1.2rem; /* Reduced bottom margin */
+    text-align: left;
+}
+
+.input-group label {
     display: block;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff; /* White color for labels */
 }
 
-.signup-container input::placeholder {
-    color: rgba(50, 50, 50, 0.8); /* Darker placeholder color */
-}
-
-.signup-container input:focus {
-    background: rgba(255, 255, 255, 0.6);
-    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
-    outline: none;
-}
-
-.signup-container button {
-    padding: 12px;
-    max-width: 200px;
-    background: linear-gradient(45deg, #0056b3,#0095c9);
-    color: white;
-    font-size: 18px;
-    font-weight: 500;
+.input-group input {
+    width: 100%;
+    padding: 0.6rem; /* Reduced padding */
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.8); /* Slightly transparent background for input fields */
+    color: #000000; /* Black text color in input fields */
+}
+
+.input-group input::placeholder {
+    color: #000000; /* Black color for placeholder text */
+    opacity: 0.7;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 0.6rem; /* Reduced padding */
+    border-width: 2px solid;
+    border-color: #ffd700;
+    border-radius: 10px;
+    background: none; /* Transparent background for buttons */
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff; /* White text on buttons */
     cursor: pointer;
-    transition: background 0.3s ease, transform 0.3s ease;
-    margin: 30px auto 0 auto; /* Increased top margin for the button */
-    display: block;
+    transition: background 0.3s ease;
 }
 
-
-.signup-container button:hover {
-    background: linear-gradient(45deg, #2b6bb0, #32a2ca);
-    transform: translateY(-3px);
+.login-btn:hover {
+    background: #ffd700; /* Golden background on hover */
+    color: black;
 }
 
-.signup-container button:active {
-    transform: translateY(0);
+.extra-options {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
 }
 
-.signup-container {
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+.extra-options a {
+    color: #aeaeae; /* Light gray color for links */
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
 }
- 
+
+.extra-options a:hover {
+    color: #ffffff; /* White color on hover */
+}

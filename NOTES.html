@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>MY NOTES</title>
+   <link rel="stylesheet" href="CSS files/NOTES.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="logo">
+                <a href=""><img src="icons/icon.svg" alt="BookHeaven Logo"> BookHeaven</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><p class="username">SUHAIL_AMAN</p></li>
+                    <hr class="divider">
+                    <li><a href="PROFILE.html">Currently Reading</a></li>
+                    <li><a href="PROFILE.html">Want To Read</a></li>
+                    <li><a href="PROFILE.html">Already Read</a></li>
+                    <hr class="divider">
+                    <li class="notes"><a href="NOTES.html">My Notes</a></li>
+                    <li><a href="PRIVACY.html">Privacy Setting</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main>
+            <div class="header">
+                <div class="navbar">
+                    <ul>
+                        <div class="profile">
+                            <img src="icons/library.jpg" alt="User Profile">
+                        </div>
+                        <li class="name">Suhail_AMAN ></li>
+                        <li class="dropdown">
+                           <a href="javascript:void(0)" class="dropbtn book_button">NOTES <i class="fa fa-angle-down"></i></a>
+                           <div class="dropdown-content">
+                               <!-- <a href="#currently-reading">Currently Reading</a>
+                               <a href="#want-to-read">Want To Read</a>
+                               <a href="#already-read">Already Read</a>
+                               <a href="#">My Notes</a>
+                               <a href="#">Privacy Setting</a> -->
+                           </div>
+                       </li>
+                       <li class="nav-item share"></li>
+                        <img class="share_icon" src="icons/icons8-share-30.png" alt="share">
+                       </li>
+                       <li class="nav-item settings">
+                        <img class="setting_icon" src="icons/icons8-settings-50.png" alt="Settings">
+                       </li> 
+                       <div style="height: 10px;"></div> <!-- Spacer -->
+                    </ul>
+                </div>
+            </div>
+
+            <div class="note-container">
+                <h2>My Notes</h2>
+                <textarea id="note-area" placeholder="Write your notes here..."></textarea>
+                <div class="note-buttons">
+                    <button class="btn save-btn">Save</button>
+                    <button class="btn draft-btn">Save as Draft</button>
+                    <button class="btn cancel-btn">Cancel</button>
+                </div>
+            </div>
+
+            <footer class="footer">
+                <div class="footer-content">
+                    <div class="footer-section help">
+                        <h3>Help</h3>
+                        <ul>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Report A Problem</a></li>
+                            <li><a href="#">Suggesting Edits</a></li>
+                            <li><a href="#">Add a Book</a></li>
+                            <li><a href="#">Release Notes</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section discover">
+                        <h3>Discover</h3>
+                        <ul>
+                            <li><a href="Home_Page.html">Home</a></li>
+                            <li><a href="PROFILE.html">My Profile</a></li>
+                            <li><a href="CustomerDashboard.html">Collections</a></li>
+                            <li><a href="#" id="return-to-top">Return To Top</a></li> <!-- Updated -->
+                        </ul>
+                    </div>
+                    <div class="footer-section language">
+                        <h3>Website Language</h3>
+                        <ul>
+                            <li><a href="#">Hindi</a></li>
+                            <li><a href="#">English</a></li>
+                            <li><a href="#">Odia</a></li>
+                            <li><a href="#">Bengali</a></li>
+                        </ul>
+                    </div>
+                </div>
+             </footer>
+
+        </main>
+
+        
+
+    </div>
+</body>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+    // Return to top functionality
+    const returnToTopBtn = document.getElementById('return-to-top');
+    returnToTopBtn.addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent default behavior of the anchor
+        window.scrollTo({ top: 0, behavior: 'smooth' }); // Smooth scroll to top
+    });
+
+    // Dropdown functionality
+    const dropdowns = document.querySelectorAll('.dropdown');
+    dropdowns.forEach(dropdown => {
+        const button = dropdown.querySelector('.dropbtn');
+        button.addEventListener('click', function() {
+            dropdown.querySelector('.dropdown-content').classList.toggle('show');
+        });
+    });
+
+    // Close the dropdown if the user clicks outside of it
+    window.addEventListener('click', function(event) {
+        dropdowns.forEach(dropdown => {
+            if (!dropdown.contains(event.target)) {
+                dropdown.querySelector('.dropdown-content').classList.remove('show');
+            }
+        });
+    });
+});
+</script>
+</html>
